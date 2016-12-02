@@ -7,6 +7,7 @@ javascript
 practical use of OOPS and Closures  
 offset  
 all selectors  
+prototype  
 
 *Angular*  
 what is angular  
