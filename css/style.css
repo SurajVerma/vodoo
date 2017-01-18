@@ -33,3 +33,37 @@ html, body, p, h1, h2, h3, h4, h5, span {
   color: #fff;
   letter-spacing: 10px;
 }
+/* line 7, ../sass/style.scss */
+.herotext .btn-cust {
+  padding: 8px 15px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+/* line 8, ../sass/style.scss */
+.herotext .btn-cust:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  top: 0;
+  left: -100%;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  z-index: -1;
+}
+/* line 9, ../sass/style.scss */
+.herotext .btn-cust:hover {
+  color: #f00;
+}
+/* line 10, ../sass/style.scss */
+.herotext .btn-cust:hover:before {
+  left: 0;
+}
