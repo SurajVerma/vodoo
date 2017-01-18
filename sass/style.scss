@@ -1,11 +1,7 @@
 @import "compass";
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #b61924;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+html,body,p,h1,h2,h3,h4,h5,span{font-family: 'Philosopher', sans-serif;}
+#particles-js {position: absolute;width: 100%;height: 100%;background-color: #b61924;background-image: url("");background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;}
+.herotext{height: 300px;width: 100%;position: absolute;bottom: 5%;
+	.jumbo{font-size: 50px; color: #fff;}
+	.subtext{font-size: 20px; color: #fff;letter-spacing: 10px;}
 }
