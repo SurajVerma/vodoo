@@ -1,12 +1,20 @@
 @import "compass";
 html,body,p,h1,h2,h3,h4,h5,span{font-family: 'Philosopher', sans-serif;}
 #particles-js {position: absolute;width: 100%;height: 100%;background-color: #b61924;background-image: url("");background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;}
-.herotext{height: 300px;width: 100%;position: absolute;bottom: 5%;
-	.jumbo{font-size: 50px; color: #fff;}
-	.subtext{font-size: 20px; color: #fff;letter-spacing: 10px;}
-	.btn-cust{padding: 8px 15px; color: #fff;border: 1px solid #fff;background: none;position: relative;;border-radius: 0;overflow: hidden;z-index: 1;
-		&:before{content:"";position: absolute;width: 100%;height: 100%;background:rgba(255,255,255,.7);top: 0;left: -100%;@include transition(all 1s ease-in-out);z-index: -1;}
-		&:hover{color: #f00;}
-		&:hover:before{left: 0;}		
+.herotext{height: 160px;width: 100%;position: absolute;bottom: 35%;
+	.jumbo{font-size: 70px; color: #fff;}
+	.subtext{font-size: 18px; color: #fff;letter-spacing: 10px;}
+	.btn-cust{padding: 8px 15px; color: #fff;border: 1px solid #fff;background: none;position: relative;;border-radius: 0;overflow: hidden;z-index: 1;perspective: 50px;margin-top: 15px;
+		&:before{content:"";position: absolute;width: 100%;height: 100%;background:rgba(255,255,255,1);@include transform(rotate3d(20, 0, 0, -90deg));top: -100%;left: 0;@include transition(all .3s ease-in-out);z-index: -1;}
+		&:hover{color: #cf0303;}
+		&:hover:before{top: 0;@include transform(rotate3d(0, 0, 0, 0));}		
+	}	
+}
+@include keyframes(jump){
+		0%{padding-top: 25px}
+		60%{padding-top: 20px}
+		100%{padding-top: 25px}
 	}
+.scroll-down{display: block;height: 50px;width: 30px;border: 2px solid rgba(255,255,255,.5); background: transparent; color: #fff;position: absolute;margin: auto;left: 0;right: 0;text-align: center;bottom: 5%;border-radius: 20px;cursor: pointer;
+	i{@include animation(jump .8s infinite linear);}
 }
