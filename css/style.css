@@ -17,19 +17,120 @@ html, body, p, h1, h2, h3, h4, h5, span {
 
 /* line 4, ../sass/style.scss */
 .herotext {
-  height: 300px;
+  height: 160px;
   width: 100%;
   position: absolute;
-  bottom: 5%;
+  bottom: 35%;
 }
 /* line 5, ../sass/style.scss */
 .herotext .jumbo {
-  font-size: 50px;
+  font-size: 70px;
   color: #fff;
 }
 /* line 6, ../sass/style.scss */
 .herotext .subtext {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   letter-spacing: 10px;
+}
+/* line 7, ../sass/style.scss */
+.herotext .btn-cust {
+  padding: 8px 15px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  z-index: 1;
+  perspective: 50px;
+  margin-top: 15px;
+}
+/* line 8, ../sass/style.scss */
+.herotext .btn-cust:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  -moz-transform: rotate3d(20, 0, 0, -90deg);
+  -ms-transform: rotate3d(20, 0, 0, -90deg);
+  -webkit-transform: rotate3d(20, 0, 0, -90deg);
+  transform: rotate3d(20, 0, 0, -90deg);
+  top: -100%;
+  left: 0;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+/* line 9, ../sass/style.scss */
+.herotext .btn-cust:hover {
+  color: #cf0303;
+}
+/* line 10, ../sass/style.scss */
+.herotext .btn-cust:hover:before {
+  top: 0;
+  -moz-transform: rotate3d(0, 0, 0, 0);
+  -ms-transform: rotate3d(0, 0, 0, 0);
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+  transform: rotate3d(0, 0, 0, 0);
+}
+
+@-moz-keyframes jump {
+  0% {
+    padding-top: 25px;
+  }
+  60% {
+    padding-top: 20px;
+  }
+  100% {
+    padding-top: 25px;
+  }
+}
+@-webkit-keyframes jump {
+  0% {
+    padding-top: 25px;
+  }
+  60% {
+    padding-top: 20px;
+  }
+  100% {
+    padding-top: 25px;
+  }
+}
+@keyframes jump {
+  0% {
+    padding-top: 25px;
+  }
+  60% {
+    padding-top: 20px;
+  }
+  100% {
+    padding-top: 25px;
+  }
+}
+/* line 18, ../sass/style.scss */
+.scroll-down {
+  display: block;
+  height: 50px;
+  width: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #fff;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 5%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* line 19, ../sass/style.scss */
+.scroll-down i {
+  -moz-animation: jump 0.8s infinite linear;
+  -webkit-animation: jump 0.8s infinite linear;
+  animation: jump 0.8s infinite linear;
 }
